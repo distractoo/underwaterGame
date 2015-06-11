@@ -1,14 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bgmusic : MonoBehaviour {
-	public AudioClip bgSound;
+public class stop : MonoBehaviour {
+
 	// Use this for initialization
 	void Start () {
-		GetComponent<AudioSource>().PlayOneShot (bgSound);
-		DontDestroyOnLoad(this.gameObject);
-
-	
+		Destroy (GameObject.FindWithTag("bgmusic"));
 	}
 	
 	// Update is called once per frame
